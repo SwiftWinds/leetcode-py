@@ -20,9 +20,9 @@ def solution(A, B):
         overflow.append(0)
     if overflow[0] == 1:
         result.extend(overflow)
-    while result[-1] == 0:
+    while len(result) > 1 and result[-1] == 0:
         result.pop()
     return list(result)
 
 
-print(solution([1] * 100000, [1] * 100000))
+print(solution([1,0,1,0],[1,1,1,1]))
